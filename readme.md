@@ -1,3 +1,3 @@
 # Lucas Sérgio Mahle
 
-Página pessoal, blog, e tudo mais =)
+Página pessoal, blog e tudo mais =)

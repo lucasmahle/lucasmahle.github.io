@@ -1,0 +1,68 @@
+.header {
+	margin-top: 10px;
+
+	.logo {
+		width: 40px;
+	}
+	.navbar-default {
+		border: none;
+		margin-top: 10px;
+		margin-bottom: 0;
+		background-color: transparent;
+
+		#top-menu {
+			background-color: @body-bg;
+
+			.navbar-nav {
+				li a {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+	
+}
+
+.site-header-container, 
+.post-header-container {
+	width: 100%;
+	text-align: center;
+
+	&.has-cover {
+		color: #fff;
+		text-shadow: 0 2px 1px rgba(0,0,0,0.67) !important;
+		background-position: 50% 50%;
+		background-size: cover;
+
+		.title {
+			font-size: 47px;
+			font-family: "Roboto Slab";
+			font-weight: bold;
+			line-height: 1.8
+		}
+		.subtitle, .info {
+			font-size: 19px;
+			font-style: italic;
+		}
+	}
+	.scrim {
+		padding: 3em 1em;
+
+		&.has-cover {
+			background-color: rgba(0,0,0,0.2);
+			padding: 9em 1em;
+			
+			
+			@media( max-width: @screen-lg-min ) {
+				padding: 9em 1em !important;
+			}
+			@media( max-width: @screen-sm-min ) {
+				padding: 3em 1em !important;
+			}
+			@media( max-width: @screen-md-min ) {
+				padding: 6em 1em !important;
+			}
+		}
+	}
+}

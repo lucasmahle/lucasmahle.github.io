@@ -1,0 +1,28 @@
+
+<div class="entry-meta share-buttons">
+	<span>Compartilhe:</span>
+
+	{% if site.shareTwitter %}
+		<!-- Twitter -->
+		<a rel="nofollow" class="fa fa-twitter share-link" href="https://twitter.com/intent/tweet?text=&quot;{{ post.twitter_text }}&quot;%20{{ site.url | replace:'index.html','' }}{{ post.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in post.tags %}{{tag}},{% endfor %}"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Compartilhe no Twitter"></a>
+	{% endif %}
+	
+	{% if site.shareFacebook %}
+		<!-- Facebook -->
+		<a rel="nofollow" class="fa fa-facebook share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | replace:'index.html','' }}{{ post.url }}"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Compartilhe no Facebook"></a>
+	{% endif %}
+
+	{% if site.shareGoogle %}
+		<!-- Google+ -->
+		<a rel="nofollow" class="fa fa-google-plus share-link" href="https://plus.google.com/share?url={{ site.url | replace:'index.html','' }}{{ post.url }}"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Compartilhe no Google+"></a>
+	{% endif %}
+		
+	{% if site.shareLinkedin %}
+		<!-- LinkedIn -->
+		<a rel="nofollow" class="fa fa-linkedin share-link" href="" title="Share on LinkedIn"></a>
+	{% endif %}
+		
+</div><!--.share-buttons-->

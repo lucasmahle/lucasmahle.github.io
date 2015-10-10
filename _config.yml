@@ -3,10 +3,11 @@ title: "Lucas Mahle"
 subtitle: "Apenas mais um blog para a comunidade"
 author: Lucas Mahle
 description: >
-  A melhor forma de se aprender, é na prática, e esse blog foi criado com esse intuito. Além de 
-  ser mais uma fonte de estudo para outras pessoas, eu tenho a chance de contribuir para a
-  a comunidade de desenvolvimento. Meu nome é Lucas Mahle, tenho 19 anos e sou de SC
-baseurl: / 
+  A melhor forma de aprender, é na prática, e esse blog foi criado com esse intuito.
+  Além de ser mais uma fonte de estudo para outras pessoas, eu tenho a chance de
+  contribuir para a comunidade de desenvolvimento.
+  Meu nome é Lucas Mahle, tenho 19 anos e sou de Santa Catarina
+baseurl: /
 url: "http://lucasmahle.com.br" # the base hostname & protocol for your site
 
 # Layout options
@@ -26,12 +27,12 @@ shareGoogle:   true
 shareLinkedin: true
 
 # Filtering Content
-limit_posts: 10
+paginate: 5
 excerpt_separator: "<!--more-->"
 
 # Outputting
-permalink:     post/:title
-paginate_path: page:num
+permalink:     "post/:title/"
+paginate_path: "page/:num/"
 
 # html minify
 compress_html:

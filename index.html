@@ -16,12 +16,36 @@ layout: default
 	</div>
 	
 	<section class="post-list container">
-		{% for post in site.posts %}
+
+		{% for post in paginator.posts %}
 			
 			{% include post-format.html %}
 			
 		{% endfor %}
 
 	</section>
+
+	<footer class="container">
+
+		<nav>
+			<ul class="pager">
+				{% if paginator.previous_page %}
+					<li class="previous">
+						<a href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Anterior</a>
+					</li>
+				{% endif %}
+					<li>
+						<span class="page_number">
+							Página {{ paginator.page }} de {{ paginator.total_pages }}
+						</span>
+					</li>
+				{% if paginator.next_page %}
+					<li class="next">
+						<a href="{{ paginator.next_page_path }}">Próxima <span aria-hidden="true">&rarr;</span></a>
+					</li>
+				{% endif %}
+			</ul>
+		</nav>
+	</footer>
 
 </section>

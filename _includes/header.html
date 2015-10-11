@@ -1,6 +1,6 @@
 <header class="container header">
 
-		<a href="{{ site.baseurl }}"><img src="{{ site.logo | prepend: site.baseurl }}" alt="Logo - {{ site.title }}" class="logo"></a>
+		<a href="/{{ site.baseurl }}"><img src="{{ "/assets/logo.png" | prepend: site.baseurl }}" alt="Logo - {{ site.title }}" class="logo"></a>
 
 		<div class="nav-menu pull-right">
 			<nav class="navbar navbar-default">
@@ -20,7 +20,7 @@
 						<ul class="nav navbar-nav">
 							{% for link in site.links %}
 								{% if link.title %}
-								<li><a class="page-link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
+									<li><a class="page-link" href="/{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
 								{% endif %}
 							{% endfor %}
 						</ul>

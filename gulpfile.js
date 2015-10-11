@@ -1,9 +1,9 @@
 var gulp        = require('gulp'),
 	plumber     = require('gulp-plumber'),
 	browserSync = require('browser-sync'),
+	cp          = require('child_process'),
 	uglify      = require('gulp-uglify'),
 	concat      = require('gulp-concat'),
-	cp          = require('child_process'),
 	minifyCSS 	= require('gulp-minify-css'),
 	less 		= require('gulp-less');
 

@@ -1,15 +1,10 @@
 ---
 layout: default
 ---
-<section class="post">
-
-	<!-- <header class="post-header">
-		<h1 class="post-title">{{ page.title }}</h1>
-		<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-	</header> -->
+<section class="post-view">
 	
 	{% if page.image %}
-		<div class="site-header-container has-cover" style="background-image: url({{ page.image | prepend: site.baseurl }});">
+		<div class="post-header-container has-cover" style="background-image: url({{ page.image | prepend: site.baseurl }});">
 			<div class="scrim has-cover">
 				<header class="site-header">
 					<h1 class="title">{{ page.title }}</h1>
@@ -20,11 +15,33 @@ layout: default
 	{% endif %}
 
 	<div class="container">
-		<article class="post-contenter">
-			{{ content }}
+		{% if page.image == null %}
+			<header class="post-header">
+				<div class="no-cover container">
+					<h1 class="post-title">{{ page.title }}</h1>
+					<span class="posted-on">{% include date-format.html %}</span>
+
+					<span class="page-divider">
+						<span class="one"></span>
+						<span class="two"></span>
+					</span>
+				</div>
+			</header>
+		{% endif %}
+
+		<article class="post-content">
+			<section class="typography">
+				{{ content }}
+			</section>
+
+			<footer>
+				// share e tags
+			</footer>
 		</article>
 
-		<footer class="comments"></footer>
+		<footer class="post-comments">
+			
+		</footer>
 	</div>
 
 </section>

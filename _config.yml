@@ -7,8 +7,8 @@ description: >
   Além de ser mais uma fonte de estudo para outras pessoas, eu tenho a chance de
   contribuir para a comunidade de desenvolvimento.
   Meu nome é Lucas Mahle, tenho 19 anos e sou de Santa Catarina
-baseurl: /
-url: "http://lucasmahle.com.br" # the base hostname & protocol for your site
+baseurl: ""
+url: "localhost:3000" 
 
 # Layout options
 copyright: ©Lucas Mahle - 2015
@@ -18,7 +18,6 @@ github_username:  lucasmahle
 linkedin_username:  lucasmahle
 disqus_key: lucasmahleblog
 cover: "assets/header_image.jpg"
-logo: "assets/logo.png"
 
 # Share options
 shareTwitter:  true
@@ -27,7 +26,7 @@ shareGoogle:   true
 shareLinkedin: true
 
 # Filtering Content
-paginate: 5
+paginate: 1
 excerpt_separator: "<!--more-->"
 
 # Outputting

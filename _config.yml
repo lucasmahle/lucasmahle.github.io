@@ -7,8 +7,8 @@ description: >
   Além de ser mais uma fonte de estudo para outras pessoas, eu tenho a chance de
   contribuir para a comunidade de desenvolvimento.
   Meu nome é Lucas Mahle, tenho 19 anos e sou de Santa Catarina
-baseurl: ""
-url: "localhost:3000" 
+baseurl: "" # dont use slash ("/blog/" => "blog")
+url: "lucasmahle.com.br" 
 
 # Layout options
 copyright: ©Lucas Mahle - 2015

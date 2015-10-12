@@ -26,7 +26,7 @@ shareGoogle:   true
 shareLinkedin: true
 
 # Filtering Content
-paginate: 1
+paginate: 10
 excerpt_separator: "<!--more-->"
 
 # Outputting
@@ -34,11 +34,11 @@ permalink:     "post/:title/"
 paginate_path: "page/:num/"
 
 # html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
+#compress_html:
+#  clippings: all
+#  comments: all
+#  endings: []
+#  profile: false
 
 
 # For external links add external: true
@@ -50,7 +50,7 @@ links:
   - title: Tags
     url: tags
   - title: Sobre mim
-    url: about
+    url: sobre
 
 # exclude my node related stuff
 exclude: ['package.json', 'node_modules', '_src']

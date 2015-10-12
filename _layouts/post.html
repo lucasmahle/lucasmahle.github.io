@@ -29,14 +29,70 @@ layout: default
 			</header>
 		{% endif %}
 
-		<article class="post-content">
+		<article class="post-content {% if page.image %}has-cover{% endif %}">
 			<section class="typography">
 				{{ content }}
 			</section>
 
-			<footer>
-				// share e tags
-			</footer>
+			<footer class="entry-footer">
+				<div class="entry-meta">
+					<span class="author vcard">
+						Por: <a class="url" href="{{ '/sobre' | preprend: site.baseurl }}">{{ site.author }}</a>
+					</span>
+				</div>
+
+				{% if page.category %}
+					<div class="entry-meta">
+						<span class="category">
+							Categoria: <a class="url" href="{{ '/cateorias/#' | preprend: site.baseurl }}{{ page.category }}">{{ page.category }}</a>
+						</span>
+					</div>
+				{% endif %}
+					
+				{% if page.tags != null %}
+					<div class="entry-meta">
+						Em: 
+						<ul class="tag-list">
+							{% for tag in page.tags %}
+								<li>
+									<a href="{{ site.baseurl }}/tags/#{{tag}}">{{ tag }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endif %}
+
+				
+				<div class="entry-meta share-buttons">
+					<span>Compartilhe:</span>
+
+					{% if site.shareTwitter %}
+						<!-- Twitter -->
+						<a rel="nofollow" class="fa fa-twitter share-link" href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ site.url | replace:'index.html','' }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
+				    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Compartilhe no Twitter"></a>
+					{% endif %}
+					
+					{% if site.shareFacebook %}
+						<!-- Facebook -->
+						<a rel="nofollow" class="fa fa-facebook share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | replace:'index.html','' }}{{ page.url }}"
+				    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Compartilhe no Facebook"></a>
+					{% endif %}
+
+					{% if site.shareGoogle %}
+						<!-- Google+ -->
+						<a rel="nofollow" class="fa fa-google-plus share-link" href="https://plus.google.com/share?url={{ site.url | replace:'index.html','' }}{{ page.url }}"
+				    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Compartilhe no Google+"></a>
+					{% endif %}
+						
+					{% if site.shareLinkedin %}
+						<!-- LinkedIn -->
+						<a rel="nofollow" class="fa fa-linkedin share-link" href="" title="Share on LinkedIn"></a>
+					{% endif %}
+						
+				</div><!--.share-buttons-->
+
+
+			</footer><!-- .entry-footer -->
 		</article>
 
 		<footer class="post-comments">

@@ -1,9 +1,9 @@
 .post-list {
-	margin-top: 60px;
+	margin-top: 90px;
 
 	.post-article {
 		background: #fff;
-		margin-bottom: 60px;
+		margin-bottom: 100px;
 		&:last-child { margin-bottom: 0; }
 
 		.post-thumbnail {
@@ -26,28 +26,30 @@
 		}
 
 		.post-content {
-			padding: 30px;
 
 			.entry-header {
-				margin-bottom: 30px;
+				margin-bottom: 20px;
+				line-height: @font-size-h2;
+
 				h1 { 
 					margin: 0 0 8px 0;
-					font-size: @font-size-h2; 
-					.text-center;
+					font-size: @font-size-h2;
+					display: inline;
+					.text-left;
 				}
+
+				.posted-on {
+					.text-muted;
+				}
+
 				a {
 					&:hover { text-decoration: none; }
 				}
-
-				.entry-meta {
-					.text-center;
-					.text-muted;
-				}
 			}
 
-			.entry-content {
+			.entry-excerpt {
 				.read-more {
-					margin-top: 30px;
+					margin-top: 20px;
 					.text-center;
 
 					.btn {
@@ -64,6 +66,8 @@
 
 			.entry-footer {
 				margin-top: 30px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #efefef;
 				
 				.entry-meta {
 					display: inline-block;

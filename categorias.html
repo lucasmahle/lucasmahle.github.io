@@ -1,0 +1,36 @@
+---
+layout: page
+title: "Categorias"
+permalink: /categorias/index.html
+image: /assets/header_image.jpg
+---
+
+<div class="category-list">
+	{% for category in site.categories %}
+		<div class="category-block">
+			<h2 class="category-title" title="Categoria {{ category[0] }}" id="{{ category[0] }}">{{ category[0] | capitalize }}</h2>
+			
+			<ul class="categories">
+				{% assign pages_list = category[1] %}
+
+				{% for post in pages_list reversed %}
+					{% if post.title != null %}
+						{% if group == null or group == post.group %}
+							<li>
+								<a href="{{ post.url | prepend: site.baseurl }}">
+									{{ post.title }}
+									<span class="entry-date">
+										- {% include date-format.html %}
+									</span>
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+
+				{% assign pages_list = nil %}
+				{% assign group = nil %}
+			</ul>
+		</div>
+	{% endfor %}
+</div>

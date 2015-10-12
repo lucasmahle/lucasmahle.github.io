@@ -1,14 +1,18 @@
-.post-view {
-	.post-header-container {
+.post-view,
+.page-view {
+	.post-header-container,
+	.page-header-container {
 		margin-bottom: 60px;
 	}
 
-	.post-header {
+	.post-header,
+	.page-header {
 		padding-top: 30px;
 		background-color: #fff;
 		.text-center;
 		
 		.post-title,
+		.page-title,
 		.posted-on {
 			color: lighten(#000, 20%);
 		}
@@ -49,9 +53,14 @@
 		}
 	}
 
-	.post-content {
-		padding: 30px;
+	.post-content,
+	.page-content {
+		padding: 0 30px 30px 30px;
 		background-color: #fff;
+
+		&.has-cover {
+			padding-top: 30px
+		}
 
 		.typography {
 			.highlight {
@@ -65,4 +74,10 @@
 			padding-top: 10px;
 		}
 	}
+	
+	.entry-footer {
+		.post-list .post-article .post-content .entry-footer;
+		border: 0;
+	}
+
 }

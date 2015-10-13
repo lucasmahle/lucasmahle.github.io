@@ -19,7 +19,7 @@ layout: default
 			<header class="post-header">
 				<div class="no-cover container">
 					<h1 class="post-title">{{ page.title }}</h1>
-					<span class="posted-on">{% include date-format.html %}</span>
+					<span class="posted-on text-muted">{% include date-format.html %}</span>
 
 					<span class="page-divider">
 						<span class="one"></span>
@@ -83,7 +83,24 @@ layout: default
 		</article>
 
 		<footer class="post-comments">
-			
+			<div class="container">
+				<h2>Comentários</h2>
+
+				<div id="disqus_thread"></div>
+
+				<script type="text/javascript">
+				/* * * CONFIGURATION VARIABLES * * */
+				var disqus_shortname = '{{ site.disqus_shortname }}';
+
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+				</script>
+				<noscript>Por favor, ative seu JavaScript para ver os <a href="https://disqus.com/?ref_noscript" rel="nofollow">comentários motivos por Disqus.</a></noscript>
+			</div>
 		</footer>
 	</div>
 

@@ -1,5 +1,5 @@
 # Site settings
-title: "Lucas Mahle"
+title: "Blog - Lucas Mahle"
 subtitle: "Apenas mais um blog para a comunidade"
 author: Lucas Mahle
 description: >
@@ -8,13 +8,14 @@ description: >
   contribuir para a comunidade de desenvolvimento.
   Meu nome é Lucas Mahle, tenho 19 anos e sou de Santa Catarina
 baseurl: "" # dont use slash ("/blog/" => "blog")
-url: "lucasmahle.com.br" 
+url: "http://lucasmahle.com.br" 
 
 # Layout options
 copyright: ©Lucas Mahle - 2015
 email: lucassmahle@gmail.com
 facebook_username: lucasmahle
 github_username:  lucasmahle
+twitter_username: _lucasmahle
 linkedin_username:  lucasmahle
 disqus_key: lucasmahleblog
 cover: "assets/header_image.jpg"

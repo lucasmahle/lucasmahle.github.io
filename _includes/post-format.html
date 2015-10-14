@@ -14,7 +14,11 @@
 		<div class="entry-excerpt">
 			{{ post.excerpt }}
 
-			<a href="{{ post.url | prepend: site.baseurl }}#more" title="{{ post.title }}">Continue lendo...</a>
+			<a href="{{ post.url | prepend: site.baseurl }}#more" title="{{ post.title }}" class="text-right">Continue lendo...</a>
+
+			<!-- <div class="read-more">
+				<a href="{{ post.url | prepend: site.baseurl }}#more" title="{{ post.title }}" class="btn btn-default">Continue lendo</a>
+			</div> -->
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">

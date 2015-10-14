@@ -27,7 +27,7 @@ shareGoogle:   true
 shareLinkedin: true
 
 # Filtering Content
-paginate: 10
+paginate: 5
 excerpt_separator: "<!--more-->"
 
 # Outputting

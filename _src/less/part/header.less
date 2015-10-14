@@ -10,8 +10,17 @@
 		margin-bottom: 0;
 		background-color: transparent;
 
+		.navbar-toggle {
+			margin-top: 0;
+		}
+
 		#top-menu {
 			background-color: @body-bg;
+			border: 0;
+
+			@media( max-width: @screen-md-min ){
+				.text-right;
+			}
 
 			.navbar-nav {
 				li a {

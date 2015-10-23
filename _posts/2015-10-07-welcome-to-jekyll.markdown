@@ -4,7 +4,7 @@ title:  "Welcome to Jekyll!"
 date:   2015-10-07 19:17:59
 category: Jekyll
 author: Lucas Mahle
-image: /assets/images/o-futuro-do-windows.png
+image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 tag: 
 - primeiro
 - post

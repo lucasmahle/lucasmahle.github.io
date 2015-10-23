@@ -1,26 +1,12 @@
-<div class="container">
-	<a id="to-top" title="Voltar ao topo" href="#">
-		<i class="fa fa-arrow-up"></i>
-	</a>
-</div>
+<!-- footer start -->
 
-<footer class="footer">
-
-	<div class="container">
-
-		<div class="row">
-			
-			<div class="col-sm-12 social-link">
-				
-				<a href="{{ "/feed" | prepend: site.baseurl }}" title="Acompanhe via RSS" class="fa fa fa-rss" target="_blank"></a>
-				<a href="https://github.com/lucasmahle/" title="Perfil de Lucas Mahle no GitHub" target="_blank" class="fa fa-github"></a>
-				<a href="https://fb.com/lucasmahle" title="Perfil de Lucas Mahle no Facebook" target="_blank" class="fa fa-facebook"></a>
-				<a href="#" title="Perfil de Lucas Mahle no LinkedIn" target="_blank" class="fa fa-linkedin"></a>
-
-			</div>
-
-			<div class="col-sm-12 powered">
-				Movido por Jekyll, alimentado com café <i class="fa fa-coffee"></i>
-			</div>
-		</div>
+<footer class="site-footer">
+  <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"> 
+  	<span class="tooltip"> <i class="fa fa-rss"></i> Assine o feed RSS!</span>
+  </a>
+  <div class="inner">
+    <section class="poweredby">Movido por <a href="http://jekyllrb.com" target="_blank" title="Jekyll Site">Jekyll</a>, alimentado com café <a href="#Café é vida"><i class="fa fa-coffee"></i></a>.</section>
+  </div>
 </footer>
+
+<!-- footer end -->

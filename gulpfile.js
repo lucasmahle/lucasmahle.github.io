@@ -63,6 +63,13 @@ gulp.task('less', function(){
 		.pipe(gulp.dest('_site/assets/css/')) // seleciona saida em tempo de execução
 		.pipe(browserSync.reload({stream:true})) // atualiza página
 		.pipe(gulp.dest('assets/css/')); // seleciona a saida em tempo de deploy
+
+		gulp.src('_src/less/curriculo.less') // seleciona todas as pastas dentro de _src/js e todos arquivos .js
+		.pipe(plumber()) // impede o fim da execução por erros
+		.pipe(less()) // compila less
+		.pipe(minifyCSS()) // minifica arquivo
+		.pipe(gulp.dest('_site/assets/css/')) // seleciona saida em tempo de execução
+		.pipe(gulp.dest('assets/css/')); // seleciona a saida em tempo de deploy
 });
 
 /**
@@ -84,12 +91,10 @@ gulp.task('js', function(){
  */
 gulp.task('watch', function () {
 	gulp.watch('_src/less/**/*.less', ['less']);
-	gulp.watch('_src/less/fonts/*.*', ['fonts']);
 	gulp.watch('_src/js/**/*.js', ['js']);
 	gulp.watch([
 		'_config.yml', // vai acompanhar todos esse aqruivos
 		'*.html',
-		'index.html', 
 		'_includes/*.html', 
 		'_layouts/*.html', 
 		'_posts/*'
@@ -100,4 +105,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['js', 'less', 'fonts', 'browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch']);

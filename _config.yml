@@ -1,57 +1,73 @@
+# Plugins
+gems:
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jemoji
+
+# Conversion
+# markdown: redcarpet
+# highlighter: pygments
+excerpt_separator: "\n\n\n"
+
+# Outputting
+permalink: "/:title/"
+paginate_path: "/page/:num"
+paginate: 5
+timezone: America/Sao_Paulo
+
+# Markdown Processors
+kramdown:
+  input: GFM
+
 # Site settings
 title: "Blog - Lucas Mahle"
-subtitle: "Apenas mais um blog para a comunidade"
-author: Lucas Mahle
 description: >
   A melhor forma de aprender, é na prática, e esse blog foi criado com esse intuito.
   Além de ser mais uma fonte de estudo para outras pessoas, eu tenho a chance de
   contribuir para a comunidade de desenvolvimento.
   Meu nome é Lucas Mahle, tenho 19 anos e sou de Santa Catarina
-baseurl: "" # dont use slash ("/blog/" => "blog")
-url: "http://lucasmahle.com.br" 
+logo: http://gravatar.com/avatar/db32ce19bc4e961616daef6d118ef7b0?s=120
+cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+url: "http://lucasmahle.com.br"
 
-# Layout options
-copyright: ©Lucas Mahle - 2015
-email: lucassmahle@gmail.com
-facebook_username: lucasmahle
-github_username:  lucasmahle
-twitter_username: _lucasmahle
-linkedin_username:  lucasmahle
-disqus_shortname: lucasmahle
-cover: "assets/header_image.jpg"
+# Default author
+author:
+  name: Lucas Mahle
+  image: http://gravatar.com/avatar/db32ce19bc4e961616daef6d118ef7b0?s=120
 
-# Share options
-shareTwitter:  true
-shareFacebook: true
-shareGoogle:   true
-shareLinkedin: true
+# social icons and sharing options
+social:
+  - icon: twitter
+    url:  https://twitter.com/_lucasmahle
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: "?text="
+    share_link: "&amp;url="
 
-# Filtering Content
-paginate: 5
-excerpt_separator: "<!--more-->"
+  - icon: github
+    url:  https://github.com/lucasmahle
+    desc: Fork me on github
+    share_url: ""
+    share_title: ""
+    share_link: ""
 
-# Outputting
-permalink:     "post/:title/"
-paginate_path: "page/:num/"
+  - icon: facebook
+    url:  https://fb.com/lucasmahle
+    desc: Follow me on facebook
+    share_url: https://www.facebook.com/sharer.php
+    share_title: ?t=
+    share_link: "&amp;u="
 
-# html minify
-#compress_html:
-#  clippings: all
-#  comments: all
-#  endings: []
-#  profile: false
+  - icon: linkedin
+    url:  https://br.linkedin.com/in/lucasmahle
+    desc: See my profile on linkedin
+    share_url: https://www.linkedin.com/shareArticle?mini=true
+    share_title: "&amp;title="
+    share_link: "&amp;url="
 
 
-# For external links add external: true
-links:
-  - title: Início
-    url: 
-  - title: Categorias
-    url: categorias
-  - title: Tags
-    url: tags
-  - title: Sobre mim
-    url: sobre
 
-# exclude my node related stuff
-exclude: ['package.json', 'node_modules', '_src']
+
+disqus_shortname: 'lucasmahle'
+ga_analytics: 

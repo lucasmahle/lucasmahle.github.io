@@ -2,50 +2,81 @@
 layout: default
 ---
 
-<section class="home">
+<div class="teaserimage">
+    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
+        Teaser Image
+    </div>
+</div>
 
-	<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url(/{{ site.cover | prepend: site.baseurl }});"{% endif %}>
-		<div class="scrim {% if site.cover %}has-cover{% endif %}">
-			<header class="site-header">
-				<h1 class="title">{{ site.title }}</h1>
-				{% if site.subtitle %}
-					<p class="subtitle">{{ site.subtitle }}</p>
-				{% endif %}
-			</header>
-		</div>
-	</div>
-	
-	<section class="post-list container">
+<header class="blog-header">
+    {% if site.logo %}
+      <a class="blog-logo" href="{{ site.url }}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
+    {% endif %}
+    <h1 class="blog-title">{{ site.title }}</h1>
+    <h2 class="blog-description">{{ site.description }}</h2>
+    <div class="custom-links">
+      {% for social in site.social %}
+        {% if social.url %}
+            <a class="icon-{{ social.icon }}" href="{{ social.url }}">
+              <i class="fa fa-{{ social.icon }}"></i>
+            </a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+        {% endif %}
+      {% endfor %}
+      <a href="{{ "/sobre/" | prepend: site.baseurl }}" title="SObre {{ site.author.name }}">Sobre</a>
+    </div>
+</header>
 
-		{% for post in paginator.posts %}
-			
-			{% include post-format.html %}
-			
-		{% endfor %}
 
-	</section>
+<main class="content" role="main">
 
-	<footer class="container">
+    <div class="cf frame">
+      {% for post in paginator.posts %}
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+                <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
 
-		<nav class="">
-			<ul class="pager">
-				{% if paginator.previous_page %}
-					<li class="previous">
-						<a href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Anterior</a>
-					</li>
-				{% endif %}
-					<li>
-						<span class="page_number">
-							Página {{ paginator.page }} de {{ paginator.total_pages }}
-						</span>
-					</li>
-				{% if paginator.next_page %}
-					<li class="next">
-						<a href="{{ paginator.next_page_path }}">Próxima <span aria-hidden="true">&rarr;</span></a>
-					</li>
-				{% endif %}
-			</ul>
-		</nav>
-	</footer>
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination" role="navigation">
+      {% if paginator.previous_page %}
+        <a class="newer-posts" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" style="margin-right: 1em">&laquo; Anterior</a>
+      {% else %}
+        <span class="newer-posts" style="margin-right: 1em; opacity: .2">&laquo; Anterior</span>
+      {% endif %}
 
-</section>
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <em class="page-number">{{ page }}</em>
+        {% elsif page == 1 %}
+          <a class="page-number" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+        {% else %}
+          <a class="page-number" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a class="older-posts" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" style="margin-left: 1em">Próxima &raquo;</a>
+      {% else %}
+        <span class="older-posts" style="margin-right: 1em; opacity: .2">Próxima &raquo;</span>
+      {% endif %}
+    </nav>
+    {% endif %}
+
+
+    <!-- {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}} -->
+
+</main>

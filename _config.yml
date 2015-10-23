@@ -48,9 +48,9 @@ social:
   - icon: github
     url:  https://github.com/lucasmahle
     desc: Fork me on github
-    share_url: ""
-    share_title: ""
-    share_link: ""
+    share_url: 
+    share_title: 
+    share_link: 
 
   - icon: facebook
     url:  https://fb.com/lucasmahle
@@ -70,4 +70,4 @@ social:
 
 
 disqus_shortname: 'lucasmahle'
-ga_analytics: 
+ga_analytics: UA-62042091-2

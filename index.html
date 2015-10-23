@@ -42,7 +42,16 @@ layout: default
             </section>
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-                <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>
+                {% if post.tags.first != null %}
+                  <span class="post-tags-set">em 
+                    {% for tag in post.tags %}
+                      <span class="post-tag-{{tag}}">
+                        <a href="/tag/#{{tag}}">{{tag}}</a>
+                      </span>
+                      {% if tag != post.tags.last %}, {% endif %}
+                    {% endfor %}
+                  </span>
+                {% endif %}
             </div>
           </div>
         </article>

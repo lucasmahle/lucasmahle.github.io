@@ -1,5 +1,5 @@
 {
-  "name": "lucasmahle.github.io",
+  "name": "blog-lucasmahle",
   "version": "1.0.0",
   "description": "Blog usando Jekyll para aprender a ensinar",
   "main": "gulpfile.js",
@@ -22,10 +22,6 @@
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-less": "^3.0.3",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-plumber": "^1.0.1",
-    "gulp-uglify": "^1.4.1"
+    "gulp-plumber": "^1.0.1"
   }
 }

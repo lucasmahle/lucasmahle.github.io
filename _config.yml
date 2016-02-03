@@ -1,75 +1,40 @@
-# Outputting
-permalink: "/:title/"
-paginate_path: "/page/:num"
+permalink   : /:year/:month/:title/
+markdown    : kramdown
+highlighter : pygments
+gems        : [jekyll-paginate]
+
 paginate: 5
-timezone: "America/Sao_Paulo"
+comments: false
+paginate_path: "/page/:num"
 
-# Build settings
-markdown: redcarpet
-highlighter: pygments
+sass:
+  style: compressed
 
-excerpt_separator: "\n\n\n"
-
-
-
-# Site settings
-title: "Blog - Lucas Mahle"
-description: >
-  A melhor forma de aprender, é na prática, e esse blog foi criado com esse intuito.
-  Além de ser mais uma fonte de estudo para outras pessoas, eu tenho a chance de
-  contribuir para a comunidade de desenvolvimento.
-  Meu nome é Lucas Mahle, tenho 19 anos e sou de Santa Catarina
-
-email: lucassmahle@gmail.com
-#blog logo
-logo: "http://gravatar.com/avatar/db32ce19bc4e961616daef6d118ef7b0?s=120"
-# blog cover
-cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
-
-name: 'Lucas Mahle'
-author: 'Lucas Mahle'
-author_image: "http://gravatar.com/avatar/db32ce19bc4e961616daef6d118ef7b0?s=120"
-
-url: "http://lucasmahle.com.br" # the base hostname & protocol for your site
+# site title, description, meta_description, meta_keywords
+# Details for the RSS feed generator
+name: Playground Lucas Mahle
+title: Lucas Mahle
+description: "Blog de estudos e playground de código"
+keywords: "Jekyll, blog, desenvolvimento, web, progração, SEO, PHP, jQuery, Angularjs, Javascript, HTML, PHP, Ruby, Python"
+url: http://lucasmahle.com.br
 baseurl: ""
-#used to display twitter cards
-twitter_handle: '@_lucasmahle'
+domain_name: lucasmahle.com.br
+google_analytics: UA-62042091-2
+repo: http://github.com/lucasmahle
+disqus_shortname: "lucasmahle"
+twitter_username: "_lucasmahle"
 
-#fill in disqus shortname to use disqus
-#disqus: disqus-shortname
+share_twitter: true
+share_facebook: true
 
-# social icons and sharing options
-social:
-  - icon: twitter
-    url:  https://twitter.com/_lucasmahle
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
+author:
+  name      : Lucas Mahle
+  image     : /assets/images/author.jpg
+  email     : lucassmahle@gmail.com
+  url       : http://lucasmahle.com.br
+  facebook  : http://facebook.com/lucasmahle
+  github    : http://github.com/lucasmahle
+  linkedin  : http://linkedin.com/in/lucasmahle
+  bio       : "Dev quase 'Both-ends'. Ama Javascript, programo em PHP, mas sonho em ser programador Ruby ou Python. Meu habitat natural é em frente a um computador (com Linux, por favor) ao lado de um bom café e entre um fone de ouvido curtindo um bom som."
 
-  - icon:  facebook
-    url: https://facebook.com/lucasmahle
-    desc: Connect with me facebook
-    share_url: https://www.facebook.com/sharer.php
-    share_title: ?t=
-    share_link: "&amp;u="
-
-  - icon: github
-    url:  https://github.com/lucasmahle
-    desc: Fork me on github
-    share_url:
-    share_title:
-    share_link:
-
-  - icon: linkedin
-    url:  https://br.linkedin.com/in/lucasmahle
-    desc: See my profile on linkedin
-    share_url: https://www.linkedin.com/shareArticle?mini=true
-    share_title: "&amp;title="
-    share_link: "&amp;url="
-
-
-
-# Other configs
-disqus_shortname: 'lucasmahle'
-ga_analytics: UA-62042091-2
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]

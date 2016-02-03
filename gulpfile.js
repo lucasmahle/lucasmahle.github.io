@@ -48,10 +48,12 @@ gulp.task('watch', function () {
 		'css/**/*.sass',
 		'_config.yml', // vai acompanhar todos esse aqruivos
 		'*.html',
+		'*.md',
 		'index.html', 
 		'_includes/*.html', 
 		'_layouts/*.html', 
-		'_posts/*'
+		'_posts/*',
+		'_sass/**/*.scss'
 	], ['jekyll-rebuild']); // e executar todas essas tarefas
 });
 

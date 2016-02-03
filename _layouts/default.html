@@ -1,25 +1,27 @@
-<!DOCTYPE html>
+{% strip %}<!DOCTYPE html>
 <html>
+  <head>
+    {% include head.html %}
 
-  {% include head.html %}
+  </head>
+  <body class="{% if page.bodyclass %}{{ page.bodyclass }}{% endif %}">
 
-  <body>
+    <main class="main-container">
 
-    {% include header.html %}
+        {% include header.html %}
 
-    <!-- content start -->
+        <section class="main-content">
+          {{ content }}
+        </section>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+        {% include footer.html %}
 
-    <!-- content end -->
+    </main>
 
-    {% include footer.html %}
-    {% include javascripts.html %}
+    {% include github-corner.html %}
 
+    <script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/jekyll-search.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
   </body>
-
-</html>
+</html>{% endstrip %}

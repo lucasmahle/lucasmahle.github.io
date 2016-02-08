@@ -1,5 +1,4 @@
 var  gulp        = require('gulp')
-	,plumber     = require('gulp-plumber')
 	,browserSync = require('browser-sync')
 	,cp          = require('child_process')
 	;
@@ -46,6 +45,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 gulp.task('watch', function () {
 	gulp.watch([
 		'css/**/*.sass',
+		'js/**/*.js',
 		'_config.yml', // vai acompanhar todos esse aqruivos
 		'*.html',
 		'*.md',

@@ -1,4 +1,4 @@
-SimpleJekyllSearch({
+  SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
@@ -13,4 +13,17 @@ $(document).ready(function() {
     $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
     e.preventDefault();
   });
+
+  var $age = $("#age");
+  if($age.length > 0){
+    var $born = new Date( $age.data('birth') );
+
+    var _calculateAge = function(birthday) { // birthday is a date
+      var ageDifMs = Date.now() - birthday.getTime();
+      var ageDate = new Date(ageDifMs); // miliseconds from epoch
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+
+    $age.text( _calculateAge($born) );
+  }
 });

@@ -1,17 +1,4 @@
-permalink   : /:year/:month/:title/
-markdown    : kramdown
-highlighter : pygments
-gems        : [jekyll-paginate]
-
-paginate: 5
-comments: false
-paginate_path: "/page/:num"
-
-sass:
-  style: compressed
-
-# site title, description, meta_description, meta_keywords
-# Details for the RSS feed generator
+# Site settings
 name: Playground Lucas Mahle
 title: Lucas Mahle
 description: "Blog de estudos e playground de código"
@@ -19,14 +6,30 @@ keywords: "Jekyll, blog, desenvolvimento, web, progração, SEO, PHP, jQuery, An
 url: http://lucasmahle.com.br
 baseurl: ""
 domain_name: lucasmahle.com.br
+
+
+# Build settings
+paginate: 5
+paginate_path: "/page/:num"
+permalink   : /:year/:month/:title/
+markdown    : kramdown
+highlighter : pygments
+gems        : [jekyll-paginate]
+sass:
+  style: compressed
+
+# Metric
 google_analytics: UA-62042091-2
+
+# Share
 repo: http://github.com/lucasmahle
 disqus_shortname: "lucasmahle"
 twitter_username: "_lucasmahle"
-
 share_twitter: true
 share_facebook: true
+comments: false
 
+# Me
 author:
   name      : Lucas Mahle
   image     : /assets/images/author.jpg
@@ -37,4 +40,5 @@ author:
   linkedin  : http://linkedin.com/in/lucasmahle
   bio       : "Dev quase 'Both-ends'. Ama Javascript, programo em PHP, mas sonho em ser programador Ruby ou Python. Meu habitat natural é em frente a um computador (com Linux, por favor) ao lado de um bom café e entre um fone de ouvido curtindo um bom som."
 
+# exclude my node related stuff
 exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]

@@ -343,6 +343,31 @@ $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
   color: #aaa;
 }
 
+$post-textcolor: #59BBFF;
+.post-content {
+  a {
+    color: $post-textcolor;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      color: lighten($post-textcolor, 10%);
+      text-decoration: none;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $post-textcolor;
+    font-weight: bold;
+  }
+
+  ul, ol {
+    padding-left: 2.5rem;
+
+    li {
+      list-style: initial;
+    }
+  }
+}
+
 .posts {
   .post {
     h1 {

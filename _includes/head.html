@@ -1,45 +1,63 @@
+{% assign page_title = '' %}
+{% capture page_title %}{% if page.description %}{{ page.description | strip_html | strip | rstrip | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{%if paginator and paginator.page != 1 %}- Página {{ paginator.page }} {% endif %}{% endcapture %}{% capture page_title %}{{ page_title | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
+
+<!-- Meta tags -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="theme-color" content="#2ecc71">
+<link rel="icon" type="image/png" href="{{ site.url | prepend: site.baseurl }}/images/favicon.ico">
 
-{% assign page_title = '' %}
+<!-- Copyright -->
+<meta name="author" content="{{site.author.name}}">
+<meta name="reply-to" content="{{site.author.email}}">
+<meta name="copyright" content="©{{site.author.name}} - {{site.time | date: '%Y'}}" />
 
-{% if page.title == "Home" %}{% capture page_title %}{{ site.title }} | {{ site.description }}{%if paginator and paginator.page != 1 %} - Página {{ paginator.page }}{% endif %}{% endcapture %}{% else %}{% capture page_title %}{%if page.slug == 'category' %}Categoria: {% endif %}{%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title }}{% endcapture %}{% endif %}
-{% capture page_title %}{{ page_title | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
-<title>{{ page_title }}</title>
+<!-- SEO tags -->
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+<meta name="description" content="{{site.title}} - {{page_title}}">
 
-{% assign page_description = '' %}
-{% capture page_description %}{% if page.description %}{{ page.description | strip_html | strip | rstrip | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{%if paginator and paginator.page != 1 %} - Página {{ paginator.page }} {% endif %}{%if page.slug == 'category' %} Categoria: {{ page.title }}{% endif %}{%if page.slug == 'tag' %} Tag: {{ page.title }}{% endif %}{% endcapture %}
-{% capture page_description %}{{ page_description | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
-<meta name="description" content="{{ page_description }}">
+<!-- OG tags -->
+<meta property="fb:admins" content="--/--" />
+<meta property="og:url" content="{{ site.url | prepend: site.baseurl }}{% if page.url %}{{page.url}}{% endif %}" />
+<meta property="og:image" content="{{ site.url | prepend: site.baseurl }}{% if page.image %}{{page.image}}{% else %}{{site.image}}{% endif %}" />
+<meta property="og:type" content="blog" />
+<meta property="og:title" content="{{site.title}} - {{page.title}}" />
+<meta property="og:site_name" content="{{page_title}}" />
+<meta property="og:description" content="{{page_title}}" />
 
+<!-- TWITTER tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{site.title}} - {{page.title}}">
+<meta name="twitter:description" content="{{page_title}}">
+<meta name="twitter:image" content="{{ site.url | prepend: site.baseurl }}{% if page.image %}{{page.image}}{% else %}{{site.image}}{% endif %}">
+
+<title>{{site.title}}{% if page_title != '' %}{{page_title | prepend: ' - '}}{% endif %}</title>
+
+<meta name="description" content="{{ page_title }}">
 <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+{% if paginator.previous_page %}<link rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+{% if paginator.next_page %}<link rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
 
 <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+<script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/jekyll-search.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
+{% if site.google_analytics %}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-{% if paginator.previous_page %}
-  <link rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}">
-{% endif %}
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
 
-{% if paginator.next_page %}
-  <link rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}">
-{% endif %}
-
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', '{{ site.google_analytics }}']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
 </script>
+{% endif %}

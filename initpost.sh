@@ -44,7 +44,7 @@ FILE_NAME="${CURRENT_DATE}-${POST_NAME}.md"
 # ----------------------------------------------------------------
 
 # Set your assets URL
-ASSETS_URL="assets"
+ASSETS_URL="/assets"
 
 # Set your destination folder
 BINPATH=$(cd `dirname $0`; pwd)
@@ -125,8 +125,6 @@ echo "image: '${ASSETS_URL}/${POST_NAME}/'"
 echo "description:"
 echo "tags:"
 echo "categories:"
-echo "twitter_text:"
-echo "introduction:"
 echo "---"
 
 }

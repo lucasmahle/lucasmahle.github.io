@@ -5,7 +5,7 @@ description: "Blog de estudos e playground de código"
 keywords: "Jekyll, blog, desenvolvimento, web, progração, SEO, PHP, jQuery, Angularjs, Javascript, HTML, PHP, Ruby, Python"
 url: http://lucasmahle.com.br
 baseurl: ""
-domain_name: lucasmahle.com.br
+image: /images/mountains.png
 
 
 # Build settings

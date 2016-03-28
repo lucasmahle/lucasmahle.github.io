@@ -37,4 +37,4 @@ As práticas que apliquei, foi setar o módulo com `angular.module('', [])` sem 
 ### Código:
 O link para o JSFiddle está [aqui](https://jsfiddle.net/lucasmahle/t4csk866/7/).
 Ou visualize por aqui mesmo:
-<script async src="http://jsfiddle.net/lucasmahle/t4csk866/6/embed/js,html,css,result/dark/"></script>
+<iframe width="100%" height="300" src="//jsfiddle.net/lucasmahle/t4csk866/7/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

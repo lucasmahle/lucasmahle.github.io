@@ -1,7 +1,7 @@
 SimpleJekyllSearch({
 	searchInput: document.getElementById('search-input'),
 	resultsContainer: document.getElementById('results-container'),
-	json: '/search.json?v=' + Math.floor((Math.random() * 10) + 1),
+	json: '/search.json',
 	searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>',
 	noResultsText: '<li class="no-results">Nada por aqui</li>',
 	limit: 10,

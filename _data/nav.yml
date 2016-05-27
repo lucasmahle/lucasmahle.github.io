@@ -1,0 +1,11 @@
+# Navbar
+
+# Menu itens
+menu:
+  - to: Sobre
+    url: /about
+  - to: Busca
+    url: /search
+
+# Categories
+enable_categories: true # true or false

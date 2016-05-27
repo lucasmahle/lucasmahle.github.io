@@ -1,0 +1,36 @@
+<header class="navbar blog-navbar navbar-default navbar-fixed-top" id="top">
+	<div class="container">
+		<nav >
+			<div>
+				<a href="{{ "/" | prepend: site.baseurl }}" title="{{ site.data.texts.go_home }}">
+					<img src="{{ "/assets/img/logo-blog.png" | prepend: site.baseurl }}" class="logo">
+				</a>
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#blog-navbar" aria-controls="blog-navbar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+			</div>
+			<div class="navbar-itens" class="collapse navbar-collapse" id="blog-navbar">
+				<ul class="nav navbar-nav">
+					{% if site.data.nav.enable_categories %}
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ site.data.texts.menu_title }} <span class="caret"></span></a>
+						<ul class="dropdown-menu">{% assign tags_list = site.categories %}  
+							{% for tag in tags_list %} 
+								<li><a href="{{ "/category/" : prepend: site.baseurl }}#{{ tag[0] | slugify }}">{{ tag[0] }}</a></li>
+							{% endfor %}{% assign tags_list = nil %}
+						</ul>
+					</li>
+					{% endif %}
+					{% for menu in site.data.nav.menu %} 
+						<li><a href="{{ menu.url : prepend: site.baseurl }}" title="{{ menu.to }}">{{ menu.to }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>

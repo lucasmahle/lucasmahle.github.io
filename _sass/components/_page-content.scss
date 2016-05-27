@@ -1,0 +1,53 @@
+.page-content {
+	background-color: #fff;
+	border-radius: 7px;
+	overflow: hidden;
+	margin-bottom: 15px;
+
+	.the-content, 
+	.post-meta {
+		padding: 30px;
+	}
+
+	.post-meta {
+		a {
+			color: $text-color;
+		}
+	}
+}
+.post-categories {
+	.post-list {
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+
+			a {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			.post-li {
+				padding: 5px 10px;
+				background-color: #F5F5F5;
+				border-bottom: 1px solid #ddd;
+
+				&:hover {
+					background-color: #f9f9f9;
+				}
+			}
+		}
+	}
+}
+
+.footer-text {
+	color: #FFF;
+	a {
+		color: #DDD;
+
+		&:hover {
+			color: #FFF;
+		}
+	}
+}

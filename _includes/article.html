@@ -1,21 +1,31 @@
-
-<article class="post">
-
-  {% if post.external_url %}
-    <header class="post-header">
-      <h1>
-        <a class="post-link" href="{{ post.external_url  }}" target="_blank" title="Permalink to: {{ post.title }}">{{ post.title }}</a>
-      </h1>
-    </header>
-  {% else %}
-    <h1>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}">{{ post.title }}</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}{% if post.category %} | {{ post.category }}{% endif %}</time>
-    </span>
-    <p class="txt-left"><a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">{{ post.content | strip_html | truncatewords: 30 }}</a></p>
-  {% endif %}
-
-
+{% if post.image != "" and site.data.post.post_image %}{% assign post_image = true %}{% else %}{% assign post_image = false %}{% endif %}
+<article class="post-item">
+	<div class="post-header{% if post_image %} with-image{% else %} no-image{% endif %}">
+		{% if post_image %}
+		<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+			<div class="bg-image" style="background-image: url('{{ site.content | prepend: site.baseurl }}{{ post.image }}')"></div>
+		</a>
+		{% endif %}
+	</div>
+	<header class="post-title">
+		<h2 class="title">
+			<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+		</h2>
+	</header>
+	<div class="post-excerpt">
+		{% if site.data.post.post_excerpt == "description" %}
+		{{ post.description }}
+		{% else %}
+		{{ post.excerpt }}
+		{% endif %}
+	</div>
+	<footer class="post-footer">
+		<a class="btn btn-default btn-readmore" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+			{% if site.data.post.btn_icon %}
+			<i class="fa fa-{{ site.data.post.icon_normal }} icon" aria-hidden="true"></i>
+			<i class="fa fa-{{ site.data.post.icon_hover }} icon-hover" aria-hidden="true"></i>
+			{% endif %}
+			{{ site.data.texts.text_open }}
+		</a>
+	</footer>
 </article>

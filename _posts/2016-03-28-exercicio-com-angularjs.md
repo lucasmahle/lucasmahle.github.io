@@ -2,11 +2,8 @@
 layout: post
 title: "Exercício com AngularJS"
 date: 2016-03-28 10:10:26
-image: '/assets/exercicio-com-angularjs/exercicio-com-angularjs.jpg'
+image: '/exercicio-com-angularjs/exercicio-com-angularjs.jpg'
 description: 'Esse é um exercício básico que recebi do meu professor de Linguagens De Programação. A resolução do mesmo devia ser feito em Delphi, mas resolvi criá-lo em Angular apenas a título de aprendizagem.'
-tags:
-- AngularJS
-- Exercício
 categories: AngularJS
 ---
 
@@ -16,7 +13,7 @@ categories: AngularJS
 Esse é um exercício básico que recebi do meu professor de Linguagens De Programação. A resolução do mesmo devia ser feito em Delphi, mas resolvi criá-lo em Angular apenas a título de aprendizagem.
 
 ### Segue o print da enunciado:
-![Print do Exercício](/assets/exercicio-com-angularjs/exercicio-pdf.png)
+![Print do Exercício]({{ site.content }}/exercicio-com-angularjs/exercicio-pdf.png)
 
 ### Resolução:
 Para resolver esse exercício, eu resolvi "brincar" um pouco com o dinamismo que o Angular oferece, inclusive aplicar um conceito que aprendi a poucos dias.

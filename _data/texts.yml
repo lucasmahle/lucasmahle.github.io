@@ -1,0 +1,50 @@
+# Texts
+
+# Home
+go_home: "Ir para página inicial"
+
+# Pagination
+next_page: "Ir para próxima página"
+prev_page: "Voltar para página anterior"
+go_to_page: "Ir para página"
+current_page: "Página atual"
+
+# Ler mais
+text_open: "Leia Mais"
+
+posted_at: "Postado às"
+
+share_text: "Compartilhe"
+
+comments_text: "Comentários"
+
+
+
+# Search
+
+# Titulo na pagina
+search_title: "Procurar post"
+
+# Label
+label_search: "Procurar post:"
+
+# Placeholder
+placeholder_search: "Procurar post"
+
+# No result
+no_search_result: "Nenhum resultado"
+
+
+
+# Categories
+
+# Titulo na pagina
+menu_title: "Categorias"
+
+# Titulo no menu
+category_title: "Categorias"
+
+
+
+# Post
+alt_image: "Imagem principal -"

@@ -2,7 +2,7 @@
 layout: post
 title: "Oi pessoal =)"
 date: 2016-02-08 17:52:03
-image: '/assets/oi-pessoal/primeiro-post.jpg'
+image: ''
 description: 'Bem-vindo ao meu blog'
 tags:
 - Parafernalha

@@ -1,16 +1,21 @@
 ---
 layout: default
-bodyclass: page
 ---
 
-<article class="post">
+<div class="container">
+	<article class="page-content">
+		<header class="post-header">
+			{% if page.image %}
+				<img src="{{ page.image }}" alt="{{ site.data.texts.alt_image }} {{ page.title }}" class="img-responsive">
+			{% endif %}
 
-  <div class="container">
+			<div class="title text-center">
+				<h1>{{ page.title }}</h1>
+			</div>
+		</header>
 
-    <div class="post-content">
-      {{ content }}
-    </div>
-
-  </div>
-
-</article>
+		<div class="the-content">
+			{{ content }}
+		</div>
+	</article>
+</div>

@@ -1,14 +1,13 @@
-# Site settings
-name: Playground Lucas Mahle
 title: Lucas Mahle
 description: "Blog de estudos e playground de código"
 keywords: "Jekyll, blog, desenvolvimento, web, progração, SEO, PHP, jQuery, Angularjs, Javascript, HTML, PHP, Ruby, Python"
 url: http://lucasmahle.com.br
 baseurl: ""
-image: /images/mountains.png
-
+image: assets/img/social-share.png
+content: /assets/content
 
 # Build settings
+excerpt_separator: <!--more-->
 paginate: 5
 paginate_path: "/page/:num"
 permalink   : /:year/:month/:title/
@@ -18,27 +17,7 @@ gems        : [jekyll-paginate]
 sass:
   style: compressed
 
-# Metric
-google_analytics: UA-62042091-2
-
-# Share
+# Repository GitHub
 repo: http://github.com/lucasmahle
-disqus_shortname: "lucasmahle"
-twitter_username: "_lucasmahle"
-share_twitter: true
-share_facebook: true
-comments: false
 
-# Me
-author:
-  name      : Lucas Mahle
-  image     : /assets/images/author.jpg
-  email     : lucassmahle@gmail.com
-  url       : http://lucasmahle.com.br
-  facebook  : http://facebook.com/lucasmahle
-  github    : http://github.com/lucasmahle
-  linkedin  : http://linkedin.com/in/lucasmahle
-  bio       : "Dev quase 'Both-ends'. Ama Javascript, programo em PHP, mas sonho em ser programador Ruby ou Python. Meu habitat natural é em frente a um computador (com Linux, por favor) ao lado de um bom café e entre um fone de ouvido curtindo um bom som."
-
-# exclude my node related stuff
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]

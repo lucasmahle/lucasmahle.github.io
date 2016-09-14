@@ -5,7 +5,6 @@ permalink: /curriculo/
 ---
 
 ### Lucas Sérgio Mahle
-
 <div>20 anos</div>
 <div>Rua Aracajú, número 292</div>
 <div>Centro – Pinhalzinho – SC</div>
@@ -17,9 +16,7 @@ permalink: /curriculo/
  - Graduando Sistemas de Informação. Horus Faculdades, conclusão em 2020.
 
 <hr>
-
 ### Conhecimentos
-<hr>
  - Programação PHP
  - Banco de dados MySQL
  - Programação Javascript
@@ -31,6 +28,7 @@ permalink: /curriculo/
  - Linux
  - Inglês Intermediário
 
+<hr>
 ### Experiências
 
  - 2012 - 2013 – Confitec Informática

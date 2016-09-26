@@ -1,30 +1,20 @@
-.blog-navbar { 
-    text-align: center;
+.blog-navbar {
+    text-align: left;
        
     .logo {
-        margin-top: 5px;
+        margin-top: 10px;
         margin-bottom: 5px;
+        float: left;
+        height: 30px;
     }
     .navbar-itens {
-        display: none;
+        display: inline-block;
+        float: right;
     }
     .navbar-collapse {
         width: 600px;
         margin: 0 auto;
     }
-    &:hover {
-        text-align: left;
-        .navbar-itens {
-            display: inline-block;
-            float: right;
-        }
-        .logo {
-            float: left;
-            height: 30px;
-            margin-top: 10px;
-        }
-    }
-    
 }
 body { 
     padding-top: 75px; 

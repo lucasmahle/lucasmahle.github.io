@@ -42,14 +42,14 @@ permalink: /curriculo/
 
 <hr>
 ### Experiências
- - 2012 - 2013 – Confitec Informática
+ - 2012 - 2013 – **Confitec Informática** <br>
 Cargo: Técnico em informática <br>
-Principais atividades: Manutenção de computadores / Redes Domésticas / Redes corporativas.
- - <br> 2014 – Zetta Brasil
+Principais atividades: Manutenção de computadores / Redes Domésticas / Redes corporativas. <br>
+ - 2014 – **Zetta Brasil**
 Cargo: Desenvolvedor Web <br>
 Principais atividades: Principais atividades: Desenvolvimento de front-end, tomando como base o layout criado pelo UX, além de pixel-perfect, o desenvolvimento de css estruturado, usando como base o framework Bootstrap e HTML semântico. Programação front-end com JavaScript usando biblioteca jQuery ou Angular framework.
-Desenvolvimento de back-end usando linguagem PHP com framework interno.
- - <br> 2015 - Atualmente – EV Comunicação
+Desenvolvimento de back-end usando linguagem PHP com framework interno.<br>
+ - 2015 - **Atualmente – EV Comunicação** <br>
 Cargo: Desenvolvedor Web <br>
 Principais atividades: Principais atividades: Desenvolvimento de front-end, tomando como base o layout criado pelo UX, além de pixel-perfect, o desenvolvimento de css estruturado, usando como base o framework Bootstrap e HTML semântico. Programação front-end com JavaScript usando biblioteca jQuery ou Angular framework.
-Desenvolvimento de back-end usando linguagem PHP com framework interno.
+Desenvolvimento de back-end usando linguagem PHP com framework interno.<br>

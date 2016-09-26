@@ -51,5 +51,5 @@ permalink: /curriculo/
 Desenvolvimento de back-end usando linguagem PHP com framework interno.<br>
  - 2015 - **Atualmente – EV Comunicação** <br>
 **Cargo**: Desenvolvedor Web <br>
-**Principais atividades**: Principais atividades: Desenvolvimento de front-end, tomando como base o layout criado pelo UX, além de pixel-perfect, o desenvolvimento de css estruturado, usando como base o framework Bootstrap e HTML semântico. Programação front-end com JavaScript usando biblioteca jQuery ou Angular framework.
+**Principais atividades**: Desenvolvimento de front-end, tomando como base o layout criado pelo UX, além de pixel-perfect, o desenvolvimento de css estruturado, usando como base o framework Bootstrap e HTML semântico. Programação front-end com JavaScript usando biblioteca jQuery ou Angular framework.
 Desenvolvimento de back-end usando linguagem PHP com framework interno.<br>

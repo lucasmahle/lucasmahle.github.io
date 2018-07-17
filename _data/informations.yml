@@ -6,15 +6,9 @@ social_links:
     url: mailto:lucassmahle@gmail.com
     icon: envelope-o
     new_window: false
-  - site: facebook
-    url: https://fb.com/lucasmahle
-    icon: facebook
   - site: github
     url: https://github.com/lucasmahle
     icon: github
-  - site: rss
-    url: /feed.xml
-    icon: feed
 
 twitter: _lucasmahle
 

@@ -1,17 +1,14 @@
 ---
 layout: page
-title: Sobre mim
+title: Sobre
 permalink: /about/
 ---
 
-### Oi, tudo bem com você?
-
-Eu estou bem. Deixe me apresentar. Meu nome é Lucas, Lucas Mahle para ser mais específico. Eu tenho 20 anos e sou morador de uma pacata cidade chamada Pinhalzinho, no oeste de Santa Catarina, uma região não muito estimulada por tecnologias.
-
 ### Esse blog...
 
-Eu decidi criar esse blog com intuito mais pessoal. Usar ele como __playground__. Pois gosto sempre de criar pequenas aplicações com as mais variadas funções, apenas a título de aprendizagem. Foi então que eu lembrei que quando eu estava estudando sobre programação, era esse o conteúdo que eu mais gostava, o conteúdo prático. Afinal, por mais que eu estudava, eu me perguntava: "Como será que eu faço a aplicação?". E nesse tipo de conteúdo eu encontrava detalhes que me davam uma linha de aprendizagem.
+Eu acompanhava muito os blogs nos anos de 2015 e 2016, quando a popularização dp front-end estáva bastante intensa. Entrei na onda e iniciei esse projeto, entretanto, ficou parado até 2018 por falta de "vontade". 
+Em 2017/2 eu ingressei no curso de Ciência da Computação na UFFS, e no segundo semestre (2018) vi uma oportunidade de usar o blog como ferramenta de sintetizar conteúdos estudados e de quebra propagar conhecimentos. Apesar de eu estar estar estudando um ensino superior, os posto nesse blog não estão necessariamente seguindo normas e padrões.
 
-### Programar <3
+### Essa pessoa...
 
-Eu amo programação. Não pense que isso é clichê de funcionário procurando emprego. Acontece que eu achei um sentido da vida com a programação. Achou exagerado? Eu não acho, assim como meu amigo músico, que consome muita música (e cigarros rsrs) o tempo todo, eu consumo conteúdo (e café rsrs) sobre programação na maior parte do tempo, eu penso em código muito tempo. Ta vendo? Ambos anseiam algo, no caso, música e programação, ambos procuram ficar perto disso o tempo todo, no caso, pesquisando (ou ouvindo), e ambos possuem um vício, no caso, cigarro e café (eu não fumo, só pra constar).
+Me chamo Lucas, moro em Chapecó, torcedor fanático da Chapecoense, e ouvinte de um bom Metal!!!

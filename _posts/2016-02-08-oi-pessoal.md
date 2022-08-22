@@ -40,7 +40,7 @@ Or, if you prefer, __use two underscores instead__.
 Mask
 ![alt text](/path/to/img.jpg "Title")
 
-{% highlight scss %}
+{% highlight css %}
 .nav {
     ul {
         li {

@@ -8,6 +8,7 @@ email: 'lucassmahle@gmail.com'
 
 include: ["_pages"]
 permalink: /:title/
+content: /assets/content
 
 # Plugins
 plugins: 
@@ -19,7 +20,6 @@ plugins:
 authors:
     lucas:
       name:           Lucas Mahle
-      avatar:         /assets/images/avatar1.jpg
       bio:            "Hi, Lucas here. If you want know more about me, check the About page"
       email:          lucassmahle@gmail.com
       twitter:        https://twitter.com/TopTherm_
@@ -33,7 +33,7 @@ defaults:
     values:
       layout: post
       author: lucas
-      avatar: /assets/images/author-lucas.jpg
+      avatar: assets/images/author-lucas.jpg
       
   # all pages
   - scope:

@@ -2,16 +2,17 @@
 layout: default
 ---
 
-<section class="container">
+<div class="container">
     <div class="page-content">
         <header class="post-header">
             <div class="title text-center">
                 <h1>Search Result</h1>
             </div>
             <div class="text-center search-form">
-                <label for="search">Searching for: </label>
-                <input type="text" class="form-control" id="search"
-                    placeholder="{{ site.data.texts.placeholder_search }}">
+                <form class="bd-search hidden-sm-down" action="{{site.baseurl}}/search">
+                    <input type="text" class="form-control" id="search"
+                        placeholder="Enter something to search">
+                </form>
             </div>
         </header>
 
@@ -19,7 +20,8 @@ layout: default
             <ul class="post-list" id="result"></ul>
         </div>
     </div>
-</section>
+</div>
+
 <script src="{{ '/assets/js/jekyll-search.min.js' | prepend: site.baseurl }}"></script>
 <script>
     (function () {
@@ -33,10 +35,11 @@ layout: default
             }, {})
 
             const searchQuery = params['q']
-            if (!searchQuery) return ''
+            return searchQuery || ''
         }
 
         const query = getQuerySearch()
+        document.getElementById('search').value = query
 
         SimpleJekyllSearch({
             searchInput: query,

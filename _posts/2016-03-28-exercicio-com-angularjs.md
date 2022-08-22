@@ -4,7 +4,7 @@ title: "Exercício com AngularJS"
 date: 2016-03-28 10:10:26
 image: '2016-03-28-exercicio-com-angularjs/exercicio-com-angularjs.jpg'
 description: 'Esse é um exercício básico que recebi do meu professor de Linguagens De Programação. A resolução do mesmo devia ser feito em Delphi, mas resolvi criá-lo em Angular apenas a título de aprendizagem.'
-categories: AngularJS
+categories: [ AngularJS ]
 ---
 
 # Exercício com AngularJS

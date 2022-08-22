@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<section class="container">
+    <div class="page-content">
+        <header class="post-header">
+            <div class="title text-center">
+                <h1>Search Result</h1>
+            </div>
+            <div class="text-center search-form">
+                <label for="search">Searching for: </label>
+                <input type="text" class="form-control" id="search"
+                    placeholder="{{ site.data.texts.placeholder_search }}">
+            </div>
+        </header>
+
+        <div class="the-content post-categories">
+            <ul class="post-list" id="result"></ul>
+        </div>
+    </div>
+</section>
+<script src="{{ '/assets/js/jekyll-search.min.js' | prepend: site.baseurl }}"></script>
+<script>
+    (function () {
+        const getQuerySearch = () => {
+            const [url, getParams] = document.location.href.split('?')
+            if (!getParams) return ''
+
+            const params = getParams.split('&').reduce((obj, c) => {
+                const [name, value] = c.split('=')
+                return { ...obj, [name]: decodeURI(value) }
+            }, {})
+
+            const searchQuery = params['q']
+            if (!searchQuery) return ''
+        }
+
+        const query = getQuerySearch()
+
+        SimpleJekyllSearch({
+            searchInput: query,
+            resultsContainer: document.getElementById('result'),
+            json: '{{ site.baseurl }}/search.json',
+            noResultsText: '<div class="text-center">Sorry, no results found</div>',
+            searchResultTemplate:
+                '<li>' +
+                '<a href="{url}" title="{title}">' +
+                '<div class="post-li">' +
+                '{title}<span class="pull-right">{date}</span>' +
+                '</div>' +
+                '</a>' +
+                '</li>',
+        });
+    })()
+</script>

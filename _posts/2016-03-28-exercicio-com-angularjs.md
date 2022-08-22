@@ -13,7 +13,7 @@ categories: AngularJS
 Esse é um exercício básico que recebi do meu professor de Linguagens De Programação. A resolução do mesmo devia ser feito em Delphi, mas resolvi criá-lo em Angular apenas a título de aprendizagem.
 
 ### Segue o print da enunciado:
-![Print do Exercício]({{site.content}}{{page.path | replace:'.md',''}}/exercicio-pdf.png)
+![Print do Exercício]({{site.content}}2016-03-28-exercicio-com-angularjs/exercicio-pdf.png)
 
 ### Resolução:
 Para resolver esse exercício, eu resolvi "brincar" um pouco com o dinamismo que o Angular oferece, inclusive aplicar um conceito que aprendi a poucos dias.

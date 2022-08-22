@@ -3,7 +3,7 @@ name: 'Lucas Mahle'
 description: 'Personal blog and other stuffs'
 logo: 'assets/images/logo-blog.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: ''
+baseurl: 'https://lucasmahle.github.io'
 email: 'lucassmahle@gmail.com'
 
 include: ["_pages"]

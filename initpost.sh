@@ -56,7 +56,7 @@ DIST_FOLDER="$POSTPATH"
 DIST_ASSETS="$ASSETSPATH"
 
 # Set your blog URL
-BLOG_URL="http://lucasmahle.com.br"
+BLOG_URL="https://lucasmahle.github.io/"
 
 # ----------------------------------------------------------------
 

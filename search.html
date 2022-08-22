@@ -1,4 +1,5 @@
 ---
+title: "Search"
 layout: default
 ---
 
@@ -38,22 +39,35 @@ layout: default
             return searchQuery || ''
         }
 
+        const getPostsData = () => {
+            return [
+                {% for post in site.posts %}
+                    {
+                    "title"    : "{{ post.title | escape }}",
+                    "category" : "{{ post.category }}",
+                    "tags"     : "{{ post.tags | array_to_sentence_string }}",
+                    "url"      : "{{ site.baseurl }}{{ post.url }}",
+                    "date"     : "{{ post.date | date: '%b %d, %Y' }}"
+                    } {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]
+        }
+
         const query = getQuerySearch()
         document.getElementById('search').value = query
 
         SimpleJekyllSearch({
             searchInput: query,
             resultsContainer: document.getElementById('result'),
-            json: '{{ site.baseurl }}/search.json',
+            json: getPostsData(),
             noResultsText: '<div class="text-center">Sorry, no results found</div>',
-            searchResultTemplate:
-                '<li>' +
-                '<a href="{url}" title="{title}">' +
-                '<div class="post-li">' +
-                '{title}<span class="pull-right">{date}</span>' +
-                '</div>' +
-                '</a>' +
-                '</li>',
+            searchResultTemplate: `
+<li>
+  <a href="{url}" title="{title}">
+    <div class="post-li"> {title}<span class="pull-right">{date}</span>
+    </div>
+  </a>
+</li>`
         });
     })()
 </script>

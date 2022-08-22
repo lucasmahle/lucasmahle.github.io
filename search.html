@@ -56,8 +56,8 @@ layout: default
         const query = getQuerySearch()
         document.getElementById('search').value = query
 
-        SimpleJekyllSearch({
-            searchInput: query,
+        const sjs = SimpleJekyllSearch({
+            searchInput: document.getElementById('search'),
             resultsContainer: document.getElementById('result'),
             json: getPostsData(),
             noResultsText: '<div class="text-center">Sorry, no results found</div>',
@@ -68,6 +68,8 @@ layout: default
     </div>
   </a>
 </li>`
+
+        sjs.search(query)
         });
     })()
 </script>

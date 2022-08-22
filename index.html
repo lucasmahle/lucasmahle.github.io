@@ -134,6 +134,7 @@ description: site.description
 </div>
     
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
+{% if site.enable_sticky_post %}
 {% for post in site.posts %} 
 {% if post.tags contains "sticky" %}
 <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
@@ -153,6 +154,7 @@ description: site.description
 </div> 
 {% endif %}
 {% endfor %}
+{% endif %}
 
 
     
@@ -166,7 +168,7 @@ description: site.description
     
 <div class="row mt-3">
    
-    <div class="col-md-8 main-loop">
+    <div class="{% if site.enable_featured %}col-md-8{% else %}col-md-12{% endif %} main-loop">
         
         <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
         
@@ -203,15 +205,17 @@ description: site.description
                 <li class="page-item disabled"><span class="next page-link">&raquo;</span></li>
               {% endif %}
             </ul>
-            {% endif %}      
+            {% endif %}
         </div>
         
     </div>
     
+    {% if site.enable_featured %}
     <div class="col-md-4">
         {% include sidebar-featured.html %}    
     </div>
-    
+    {% endif %}
+
 </div>
 
 

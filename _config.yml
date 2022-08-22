@@ -8,7 +8,11 @@ email: 'lucassmahle@gmail.com'
 
 include: ["_pages"]
 permalink: /:title/
+
+# Content
 content: /assets/content/
+enable_sticky_post: false
+enable_featured: false
 
 # Plugins
 plugins: 

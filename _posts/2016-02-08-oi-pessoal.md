@@ -6,7 +6,7 @@ date: 2016-02-08 17:52:03
 description: 'Bem-vindo ao meu blog'
 tags: [sticky]
 categories: [ Personal ]
-image: ''
+image: '2016-03-28-exercicio-com-angularjs/cco-city.jpg'
 ---
 
 # h1

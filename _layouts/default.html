@@ -45,7 +45,9 @@
                {% include menu-header.html %}
             </ul>
             <ul class="navbar-nav ml-auto d-flex align-items-center">
-                {% include search-lunr.html %}
+                <form class="bd-search hidden-sm-down" action="{{site.baseurl}}/search">
+                    <input type="text" class="form-control text-small" name="q" value="" placeholder="Enter something to search"> 
+                </form>
             </ul>
         </div>
     </div>

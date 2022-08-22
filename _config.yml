@@ -1,23 +1,65 @@
-title: Lucas Mahle
-description: "Blog de estudos e playground de código"
-keywords: "Jekyll, blog, desenvolvimento, web, progração, SEO, PHP, jQuery, Angularjs, Javascript, HTML, PHP, Ruby, Python"
-url: http://lucasmahle.com.br
-baseurl: ""
-image: assets/img/social-share.png
-content: /assets/content
+# Site
+name: 'Mundana'
+description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: '/mundana-theme-jekyll'
+disqus: 'demowebsite'
+email: 'wowthemesnet@gmail.com'
+mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
-# Build settings
-excerpt_separator: <!--more-->
-paginate: 5
-paginate_path: "/page/:num"
-permalink   : /:year/:month/:title/
-markdown    : kramdown
-highlighter : rouge
-gems        : [jekyll-paginate]
-sass:
-  style: compressed
+include: ["_pages"]
+permalink: /:title/
 
-# Repository GitHub
-repo: http://github.com/lucasmahle
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  
+authors:
+    sal:
+      name:           Sal
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/avatar1.jpg
+      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      email:          wowthemesnet@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
 
-exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+    jane:
+      name:           Jane
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/avatar2.jpg
+      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
+      email:          fakemail@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
+ 
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: sal
+      avatar: /assets/images/avatar1.jpg
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Paginate
+paginate: 10
+
+
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
